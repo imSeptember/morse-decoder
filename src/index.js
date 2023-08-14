@@ -43,6 +43,8 @@ function decode(expr) {
     const morseCode = group.replace(/10/g, ".").replace(/11/g, "-");
     let result = morseCode.replace(/0/g, "");
     return MORSE_TABLE[result];
+  });
+  return decodedChars.join("");
 }
 
 module.exports = {
